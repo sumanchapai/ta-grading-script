@@ -8,13 +8,13 @@ import math
 PROJECT_SUBMISSIONS = Path("/Users/suman/Desktop/purdue-ta/grading-fall-cs408/proj1-submissions")
 PROJECT_DEADLINE = datetime(2024, 9, 10, 23, 59)
 # Filename that saves the number of late days used by a student in this project
-LATE_DAYS_FILENAME = "late-days-used-project1.txt" 
+LATE_DAYS_FILENAME = "private-late-days-used-project1.txt" 
 # Here we define the script to unzip the pdfs and put them in a new folder, etc.
-SAVE_SUBMISSIONS_TO = "clean-submissions-project-1"
+SAVE_SUBMISSIONS_TO = "private-clean-submissions-project-1"
 SCRIPT_PRE = f"mkdir {SAVE_SUBMISSIONS_TO}"
 SCRIPT_POST = f"cd {SAVE_SUBMISSIONS_TO}"
 # Once that script is generated run it as `bash SCRIPT_NAME`
-SCRIPT_NAME = "project-1-collect.sh"
+SCRIPT_NAME = "private-project-1-collect.sh"
 # Customize the script as needed
 def SCRIPT_FOR_EACH(project_path, username):
     lines = [
