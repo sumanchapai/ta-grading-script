@@ -76,7 +76,7 @@ def generate_late_days_file():
         for student in students_latest_submission:
             late_by = late_days[student]
             submitted_at = students_latest_submission[student][1].strftime("%b-%d %H:%M")
-            fd.write(f"{student:<20} \t {late_by}\t {submitted_at}\n")
+            fd.write(f"{student:<20}\t{late_by}\t{submitted_at}\n")
 
 def generate_script_for():
     _, students_latest_submission = get_late_days_and_submissions_dict()
