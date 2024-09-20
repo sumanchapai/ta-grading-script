@@ -35,13 +35,13 @@ def SCRIPT_FOR_EACH(project_path, username):
 ### NO NEED TO CHANGE
 ### Should work the same for all projects without changing anything
 STUDENT_FOLDER_REGEX =  re.compile(
-    r"^\d+-\d+\s-\s([\w\d]+)\s\w+\s\w+\s-\s(.*)$"
-) # Example: 202020-29393 - chapsu01 Suman Chapai - Sep 20, 2024 1035 PM 
+    r"^\d+-\d+\s-\s([\w\d]+)\s\w+(\s\w+)*\s\w+\s-\s(.*)$"
+) # Example: 202020-29393 - chapsu01 Suman [Optional Middle] Chapai - Sep 20, 2024 1035 PM 
 DATE_TIME_FORMAT = "%b %d, %Y %I%M %p" # Example: Sep 20, 2024 1035 PM
 
 def get_purdue_id_submission_time(name):
     match =  STUDENT_FOLDER_REGEX.match(name)
-    purdue_username, date_str = match.groups()
+    purdue_username, _, date_str = match.groups()
     time = datetime.strptime(date_str, DATE_TIME_FORMAT)
     return purdue_username, time
 
