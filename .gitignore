@@ -1,4 +1,9 @@
 .DS_Store
 .venv
-proj1-submissions
 private*
+private/
+scratch/
+experiment/
+tmp/
+.dev/
+sandbox/
